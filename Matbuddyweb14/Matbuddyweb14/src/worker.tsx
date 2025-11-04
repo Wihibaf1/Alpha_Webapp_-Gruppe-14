@@ -1,17 +1,17 @@
-import { render, route } from "rwsdk/router";
-import { defineApp } from "rwsdk/worker";
+import { defineApp } from "rwsdk/worker"
+import { route, render } from "rwsdk/router"
 
-import { Document } from "@/app/Document";
-import { setCommonHeaders } from "@/app/headers";
-import { Home } from "@/app/pages/Home";
-
-export type AppContext = {};
+import { Document } from "@/app/Document"
+import { Home } from "@/app/pages/Home"
+import { Login } from "@/app/pages/LoginPage"
+import { Recipes } from "@/app/pages/Recipes"
 
 export default defineApp([
-  setCommonHeaders(),
-  ({ ctx }) => {
-    // setup ctx here
-    ctx;
-  },
-  render(Document, [route("/", Home)]),
-]);
+  render(Document, [
+    route("/", () => <Login />),
+    route("/login", () => <Login />),
+    route("/home", () => <Home />),
+    route("/recipes", () => <Recipes />),
+    route("/ping", () => <h1>Pong!</h1>),
+  ]),
+])
