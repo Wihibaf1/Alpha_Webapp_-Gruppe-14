@@ -22,6 +22,8 @@
     "types": "tsc"
   },
   "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
     "react": "^19.3.0-canary-561ee24d-20251101",
     "react-dom": "^19.3.0-canary-561ee24d-20251101",
     "react-server-dom-webpack": "19.3.0-canary-561ee24d-20251101",
@@ -30,7 +32,10 @@
   "devDependencies": {
     "@cloudflare/vite-plugin": "1.13.18",
     "@cloudflare/workers-types": "4.20251014.0",
+    "@redwoodjs/cli": "^8.9.0",
     "@tailwindcss/postcss": "^4.1.17",
+    "@types/cors": "^2",
+    "@types/express": "^5",
     "@types/node": "~24.5.2",
     "@types/react": "19.1.2",
     "@types/react-dom": "19.1.2",
